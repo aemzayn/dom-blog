@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>My blog</title>
+  </head>
+  <body class="m-0 p-0 min-h-[100vh] bg-gray-900">
+    <div class="container max-w-4xl mx-auto">
+      <nav class="text-gray-100 py-6 px-4">
+        <ul class="flex gap-4">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="new.html">Create a new post</a>
+          </li>
+        </ul>
+      </nav>
+      <main class="w-full px-4 gap-4 flex flex-col">
+        <h1 class="text-4xl text-center text-white">Blog.</h1>
+        <div id="posts" class="mt-2 grid grid-cols-3 gap-4">
+          <!-- <div class="post">
+            <h2 class="title">Hello world</h2>
+            <p class="tags">
+              <span class="tag">#js</span>
+              <span class="tag">#coding</span>
+            </p>
+            <button class="link">continue reading ></button>
+          </div> -->
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+    <script src="home.js"></script>
+  </body>
+</html>

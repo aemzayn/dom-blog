@@ -1,0 +1,40 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.post {
+  padding: 1rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: #e5e7eb;
+}
+
+.post .title {
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 200ms;
+}
+
+.post .link {
+  font-style: italic;
+  transition: all 200ms;
+}
+
+.post .link:hover {
+  text-decoration: underline;
+}
+
+.post .tags {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.1rem;
+}
+
+.post .tags .tag {
+  padding: 0.1rem 0.5rem;
+  border-radius: 5px;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 0.8rem;
+  transition: all 200ms;
+}
