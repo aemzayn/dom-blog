@@ -14,20 +14,20 @@
     />
     <title>Create a new post</title>
   </head>
-  <body class="bg-gray-800">
+  <body class="bg-gray-900">
     <div class="container max-w-4xl mx-auto">
       <nav class="text-gray-100 py-6 px-4">
-        <ul class="flex gap-4">
-          <li>
+        <ul class="flex gap-4 items-center">
+          <li data-href="index">
             <a href="index.html">Home</a>
           </li>
-          <li>
+          <li data-href="new" class="active">
             <a href="new.html">Create a new post</a>
           </li>
         </ul>
       </nav>
       <main class="w-full px-4">
-        <form id="new-post-form" class="flex flex-col gap-4">
+        <form id="new-post-form" class="flex items-strecth flex-col gap-4">
           <h1 class="text-4xl text-center text-white">New.</h1>
           <input
             class="p-2 rounded-md"
@@ -55,9 +55,21 @@
             type="date"
             name="date"
           />
-          <button type="submit" class="bg-blue-600 py-2 rounded-md text-white">
-            Add +
-          </button>
+          <div id="form-button" class="w-full flex gap-4">
+            <button
+              type="submit"
+              class="w-full bg-blue-600 py-2 rounded-md text-white"
+            >
+              Add +
+            </button>
+            <button
+              type="button"
+              data-button="delete"
+              class="w-full bg-red-600 py-2 rounded-md text-white"
+            >
+              Delete
+            </button>
+          </div>
         </form>
       </main>
     </div>

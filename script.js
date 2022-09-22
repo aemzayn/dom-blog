@@ -1,7 +1,13 @@
 const form = document.getElementById("new-post-form");
+const deleteButton = document.querySelector(`[data-button="delete"]`);
+deleteButton?.addEventListener("click", () => deleteButtonHandler());
 let editingSlug = null;
 
 window.onload = () => {
+  handleEditRoute();
+};
+
+function handleEditRoute() {
   const url = new URL(location.href);
   const params = new URLSearchParams(url.search);
   const slug = params.get("slug");
@@ -10,13 +16,13 @@ window.onload = () => {
     if (post) {
       editingSlug = slug;
       populateFormWithPost(post);
-      form[form.length - 1].textContent = "Update";
-    } else {
-      form[form.length - 1].textContent = "Add +";
+      form[form.length - 2].textContent = "Update";
     }
+  } else {
+    deleteButton.style.display = "none";
   }
   handleFormEventListener();
-};
+}
 
 function populateFormWithPost(post) {
   form[0].value = post.title;
@@ -27,6 +33,11 @@ function populateFormWithPost(post) {
 
 function handleFormEventListener() {
   form.addEventListener("submit", formSubmitHandler);
+}
+
+function deleteButtonHandler() {
+  deletePost(editingSlug);
+  location.assign("index.html");
 }
 
 function formSubmitHandler(event) {

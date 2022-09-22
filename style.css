@@ -2,6 +2,18 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+nav li.active {
+  list-style: none;
+  box-sizing: border-box;
+  border-radius: 0.375rem;
+  background-color: rgb(30 58 138 / 1);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  color: rgb(219 234 254 / 1);
+}
+
 .post {
   padding: 1rem;
   border: 1px solid gray;
@@ -25,7 +37,8 @@ body {
 }
 
 .post .tags {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
   display: flex;
   gap: 0.1rem;
 }
